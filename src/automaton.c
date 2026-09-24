@@ -6,8 +6,7 @@
 
 TokenType handle_state_transition(StateType *state, char caracter)
 {
-// :D
-    StateType newState = Unknown
+    StateType newState = Unknown;
     TokenType probTokenType;
     TokenType ignToken = TokenNULL;
     switch (caracter) {
