@@ -2,9 +2,16 @@ typedef enum {
     Start,
     Id,
     Comment,
-    Number,
+    Numeric,
     GreatherThan,
     LessThan,
     Equal,
-    Different
+    Different,
+    Error,
+    StateEOF,
+    GenericBinop,
+    Markup,
+    Unknown
 } StateType;
+
+TokenType handle_state_transition(StateType *state, char caracter);
