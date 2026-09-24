@@ -1,0 +1,9 @@
+programa quadradinho;
+
+inicio {
+    repetir {
+        andar();
+        andar();
+        direita();
+    }
+}
