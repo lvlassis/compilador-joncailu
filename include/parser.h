@@ -1,6 +1,8 @@
 #ifndef PARSER_H
 #define PARSER_H
 
+#include "compiler.h"
+
 // Função de parsing
 void parser_parse(CompilerContext* ctx);
 // Recebe o contexto do compilador (arquivo source) e iniciará o processo de parsing do código-fonte, construindo a árvore de sintaxe abstrata (AST) e verificando a conformidade com a gramática da linguagem.

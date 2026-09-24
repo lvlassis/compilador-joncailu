@@ -2,28 +2,28 @@ CC = gcc
 
 # Directories
 BIN_DIR = bin/
-SCANNER_DIR = scanner/
+SRC_DIR = src/
+INCLUDE_DIR = include/
 
 # Files
-SCANNER_FILE_NAME = scanner
+BIN_NAME = joncailu
 
 # Sources
-SCANNER_SOURCE = $(SCANNER_DIR)$(SCANNER_FILE_NAME).c
+SOURCES = $(wildcard $(SRC_DIR)*.c)
 
 # Targets
-SCANNER_TARGET = $(BIN_DIR)$(SCANNER_FILE_NAME)
+TARGET = $(BIN_DIR)$(BIN_NAME)
 
 
-.PHONY: scanner clean
+.PHONY: build clean
 
-scanner: $(SCANNER_TARGET)
+build: $(TARGET)
 
 clean:
 	rm -fr $(BIN_DIR)*
 
-$(SCANNER_TARGET): $(SCANNER_SOURCE) | $(BIN_DIR)
-	$(CC) -o $@ $^
+$(TARGET): $(SOURCES) | $(BIN_DIR)
+	$(CC) -I. -o $@ $(SOURCES)
 
 $(BIN_DIR):
 	mkdir -p $@
-

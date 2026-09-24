@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include "include/token.h"
 
 
@@ -25,4 +27,8 @@ TokenType lookup_token(const char *lexeme)
     }
 
     return TokenID;
+}
+
+void token_print(const Token *t) {
+    printf("Print Token!");
 }

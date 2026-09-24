@@ -1,6 +1,9 @@
 #ifndef LEXIC_H
 #define LEXIC_H
 
+#include "token.h"
+#include "compiler.h"
+
 Token lexic_read_token(CompilerContext* ctx);
 // Sempre que chamada, calcula e retorna o próximo token do código fonte.
 
