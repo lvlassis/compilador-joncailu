@@ -30,5 +30,10 @@ TokenType lookup_token(const char *lexeme)
 }
 
 void token_print(const Token *t) {
-    printf("Print Token!");
+    printf("Lexema: %s\n", t->lexeme);
+}
+
+void free_token (Token *token)
+{
+    free(token->lexeme);
 }

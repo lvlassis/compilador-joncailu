@@ -27,13 +27,13 @@ typedef enum
     TokenSemicolon,
     TokenIgn,
     TokenComment,
-    TokenErr
+    TokenNULL
 } TokenType;
 
 typedef struct
 {
     TokenType type;
-    char lexeme[1024];
+    char *lexeme;
 } Token;
 
 typedef Token Keyword;
@@ -55,5 +55,7 @@ static const size_t NUM_KEYWORDS = sizeof(KEYWORDS) / sizeof(KEYWORDS[0]);
 TokenType lookup_token(const char *lexeme);
 
 void token_print(const Token *t);
+
+void free_token(Token *token);
 
 #endif
