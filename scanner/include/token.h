@@ -53,4 +53,6 @@ static const size_t NUM_KEYWORDS = sizeof(KEYWORDS) / sizeof(KEYWORDS[0]);
 
 TokenType lookup_token(const char *lexeme);
 
+void token_print(const Token *t);
+
 #endif
