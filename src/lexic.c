@@ -7,9 +7,6 @@ Token lexic_read_token(CompilerContext* ctx) {
     
     // Implementar lógica de percorrer a string do código fonte para 
     // identificar onde inicia e termina o próximo lexema
-    while (1) {
-        
-    }
     
     // Implementar lógica de classificar o lexema selecionado 
     // gerando um token.
