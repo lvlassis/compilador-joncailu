@@ -68,15 +68,15 @@ TokenType handle_state_transition(StateType *state, char caracter)
                 probTokenType = TokenComma;
                 break;
             case '\n':
-                newState = Start;
+                newState = Ign;
                 ignToken = TokenIgn;
                 break;
             case ' ':
-                newState = Start;
+                newState = Ign;
                 ignToken = TokenIgn;
                 break;
             case '\t':
-                ignToken = TokenIgn;
+                ignToken = Ign;
                 newState = Start;
                 break;
             case '#':
@@ -85,8 +85,6 @@ TokenType handle_state_transition(StateType *state, char caracter)
             default:
                 newState = Unknown;
     }
-    printf("cahar: %c\n", caracter);
-    printf("state %d\n", *state);
 
     if (*state == Start)
     {
@@ -101,8 +99,6 @@ TokenType handle_state_transition(StateType *state, char caracter)
         }
         else
             *state = newState;
-        if (ignToken == TokenIgn)
-            return TokenIgn; 
         return TokenNULL;
     }
     else if (*state == Id) {
@@ -195,6 +191,17 @@ TokenType handle_state_transition(StateType *state, char caracter)
                 *state = Start;
         }
         return probTokenType;
+    }
+    else if (*state == Ign) 
+    {
+        if (newState == Unknown)
+        {
+            if (!newState == Unknown && (isalpha(caracter) || caracter == '_' || isdigit(caracter)))
+                *state = Error;
+            else
+                *state = Start;
+        }
+        return TokenIgn;
     }
     else {
         *state = Error;

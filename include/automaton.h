@@ -11,6 +11,7 @@ typedef enum {
     StateEOF,
     GenericBinop,
     Markup,
+    Ign,
     Unknown
 } StateType;
 

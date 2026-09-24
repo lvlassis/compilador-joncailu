@@ -39,15 +39,16 @@ typedef struct
 typedef Token Keyword;
 
 static const Keyword KEYWORDS[] = {
-    {TokenProg, "programa"},
-    {TokenStart, "inicio"},
-    {TokenIf, "se"},
-    {TokenElse, "senao"},
-    {TokenSens, "sujo"},
-    {TokenSens, "obstaculo"},
+    {TokenReturn, "devolva"},
     {TokenEnd, "fim"},
     {TokenFunc, "func"},
-    {TokenReturn, "devolva"}
+    {TokenStart, "inicio"},
+    {TokenSens, "obstaculo"},
+    {TokenProg, "programa"},
+    {TokenRep, "repetir"},
+    {TokenIf, "se"},
+    {TokenElse, "senao"},
+    {TokenSens, "sujo"}
 };
 
 static const size_t NUM_KEYWORDS = sizeof(KEYWORDS) / sizeof(KEYWORDS[0]);

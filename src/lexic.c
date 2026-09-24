@@ -13,15 +13,14 @@ Token lexic_read_token(CompilerContext* ctx) {
     StateType state = Start;                // Estado do autômato
     TokenType tokenType = TokenNULL;
 
-    for (int i = 0; tokenType == TokenNULL || tokenType == TokenIgn; i++) 
+    int shift = 0;
+
+    for (int i = 0; tokenType == TokenNULL; i++)
     {
         auxCursor = cursor + i;
         value = ctx->source_code[auxCursor];
 
         tokenType = handle_state_transition(&state, value);
-        if (tokenType == TokenIgn) i++;
-        printf("NewState: %d\n", state);
-        printf("TokenType: %d\n\n", tokenType);
         if (state == Error)
         {
             printf("Error!");
@@ -33,12 +32,17 @@ Token lexic_read_token(CompilerContext* ctx) {
     
     if (charCopy == NULL) {
         printf("Erro de alocação de memória.\n");
+        return (Token) {TokenNULL, ""};
     }
 
     strncpy(charCopy, ctx->source_code, auxCursor);
     charCopy[auxCursor] = '\0';
     
     ctx->source_code += auxCursor;
+    if (tokenType == TokenID)
+    {
+        tokenType = lookup_token(charCopy);
+    }
     Token t = {tokenType, charCopy};
     return t;
 }
