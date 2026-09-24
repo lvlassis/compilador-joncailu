@@ -14,6 +14,6 @@ Token lexic_read_token(CompilerContext* ctx) {
     // Mover o ctx->current_pos; para o final do lexema identificado
 
     // (MOCK) Retorna sempre token EOF
-    Token t = {TokenEOF, ""};
+    Token t = {TokenID, "a"};
     return t;
 }
