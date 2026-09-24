@@ -1,3 +1,8 @@
+#ifndef TOKEN_DEFINITION
+#define TOKEN_DEFINITION
+
+#include <stddef.h>
+
 typedef enum 
 {
     TokenProg,
@@ -49,3 +54,8 @@ static const Keyword KEYWORDS[] = {
     {TokenReturn, "devolva"}
 };
 
+static const size_t NUM_KEYWORDS = sizeof(KEYWORDS) / sizeof(KEYWORDS[0]);
+
+TokenType lookup_token(const char *lexeme);
+
+#endif
