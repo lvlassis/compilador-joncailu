@@ -26,7 +26,8 @@ typedef enum
     TokenReturn,
     TokenSemicolon,
     TokenIgn,
-    TokenComment
+    TokenComment,
+    TokenErr
 } TokenType;
 
 typedef struct
