@@ -17,7 +17,6 @@ typedef enum
     TokenIf,
     TokenElse,
     TokenSens,
-    TokenAct,
     TokenEnd,
     TokenInt,
     TokenBinop,
@@ -45,10 +44,6 @@ static const Keyword KEYWORDS[] = {
     {TokenElse, "senao"},
     {TokenSens, "sujo"},
     {TokenSens, "obstaculo"},
-    {TokenAct, "direita"},
-    {TokenAct, "esquerda"},
-    {TokenAct, "limpar"},
-    {TokenAct, "mover"},
     {TokenEnd, "fim"},
     {TokenFunc, "func"},
     {TokenReturn, "devolva"}
