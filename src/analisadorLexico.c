@@ -74,15 +74,11 @@ TokenType automato(char caracter){
     
     default:
         if (isalpha(caracter)) {
-
-                
-                return TOKEN_ID; // Ou o retorno que sua função gerar
-            } 
-            else if (isdigit(caracter)) {
-                return TokenInt;
-            } 
-            else {
-                return TokenErr; 
-            }
-}
+            return TOKEN_ID; // Ou o retorno que sua função gerar
+        } else if (isdigit(caracter)) {
+            return TokenInt;
+        } else {
+            return TokenErr; 
+        }
+    }
 }
