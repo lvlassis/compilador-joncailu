@@ -10,4 +10,7 @@ Token lexic_read_token(CompilerContext* ctx);
 Token lexic_peek_token(CompilerContext* ctx);
 // Função que retorna qual o próximo token, sem efetivamente consumir ele.
 
+int get_end_token(CompilerContext*);
+// Função que percorre o código fonte até encontrar o final do token atual, retornando a posição do cursor final
+
 #endif // LEXIC_H

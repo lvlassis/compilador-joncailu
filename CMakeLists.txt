@@ -12,3 +12,17 @@ target_include_directories(joncailu PRIVATE ${CMAKE_SOURCE_DIR})
 set_target_properties(joncailu PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
 )
+
+# Testes
+enable_testing()
+
+file(GLOB LIB_SOURCES "src/*.c")
+list(FILTER LIB_SOURCES EXCLUDE REGEX ".*main\\.c$")
+
+file(GLOB TEST_SOURCES "tests/*.c")
+foreach(TEST_FILE ${TEST_SOURCES})
+    get_filename_component(TEST_NAME ${TEST_FILE} NAME_WE)
+    add_executable(${TEST_NAME} ${TEST_FILE} ${LIB_SOURCES})
+    target_include_directories(${TEST_NAME} PRIVATE ${CMAKE_SOURCE_DIR})
+    add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})
+endforeach()
