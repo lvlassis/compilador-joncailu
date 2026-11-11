@@ -1,5 +1,4 @@
 # Arquitetura
-
 ## Historinha 
 
 Pode-se pensar um compilador como sendo uma pequena 
