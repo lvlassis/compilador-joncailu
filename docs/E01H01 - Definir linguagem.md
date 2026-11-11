@@ -1,8 +1,8 @@
 # E01H01 - Definir linguagem
 Atribuido para:
-- [[Caio Mota]]
-- [[Jonathas dos Santos]]
-- [[Lucas Vinícius]]
+- #Caio
+- #Jonathas
+- #Lucas
 ## Descrição
 **Como** membro do time,
 **Quero** que haja a [[Definição da Nossa Linguagem]] como fonte da verdade e meta de implementação,

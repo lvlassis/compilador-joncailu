@@ -1,6 +1,6 @@
 # {{title}}
 Atribuido para:
-- _link responsável 1_
+- #exemplo
 ## Descrição
 **Como** usuário...
 **Quero** que...

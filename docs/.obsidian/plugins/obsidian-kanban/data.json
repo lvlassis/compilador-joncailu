@@ -1,0 +1,11 @@
+{
+  "move-tags": true,
+  "tag-colors": [
+    {
+      "tagKey": "#Lucas",
+      "color": "rgba(255, 255, 255, 1)",
+      "backgroundColor": "rgba(90, 72, 2, 1)"
+    }
+  ],
+  "move-dates": true
+}

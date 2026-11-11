@@ -7,11 +7,16 @@ kanban-plugin: board
 ## Histórias
 
 - [ ] [[E01H01 - Definir linguagem]]
+	
+	#Caio #Jonathas #Lucas 
+	
+	@{2026-11-14}
 
 
 ## Aberto
 
 - [ ] [[E01H01T01 - Definir Linguagem Lucas]]
+	#Lucas
 
 
 ## Em Andamento
