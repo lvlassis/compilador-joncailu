@@ -4,3 +4,4 @@ _Aqui colocamos nossas histórias de usuário_
 - [ ] [[E01H01 - Definir linguagem]]
 ## E02 - Atividade 3
 - [ ] [[E02 - Atividade 3]]
+- [ ] [[E02H01 - Implementar automação de testes de programas]]

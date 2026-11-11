@@ -17,6 +17,8 @@ kanban-plugin: board
 
 - [ ] [[E01H01T01 - Definir Linguagem Lucas]]
 	#Lucas
+- [ ] [[E01H01T02 - Definir Linguagem Jonathas]]
+	#Jonathas
 
 
 ## Em Andamento

@@ -39,8 +39,8 @@ de 45% (0,45) na nota total do trabalho de implementação (TI).
 	- [ ] Construção do autômato LR 
 	- [ ] Construção da tabela de análise 
 	- [ ] Realização da análise 
-- [ ] Validação de Programas escritos na linguagem
+- [ ] Validação de Programas escritos na linguagem ^2e8114
 - [ ] Apresentar mensagens de erro (léxico e sintático)
 - [ ] Traduzir o programa para python
 ## Tarefas relacionadas
-- [ ] _link tarefa 1
+- [ ] 

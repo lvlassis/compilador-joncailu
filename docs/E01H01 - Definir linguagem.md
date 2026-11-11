@@ -11,3 +11,5 @@ Atribuido para:
 - [ ] Documento [[Definição da Nossa Linguagem]] preenchido
 ## Tarefas relacionadas
 - [ ] [[E01H01T01 - Definir Linguagem Lucas]]
+- [ ] [[E01H01T02 - Definir Linguagem Jonathas]]
+- [ ] [[E01H01T03 - Definir Linguagem Caio]]
